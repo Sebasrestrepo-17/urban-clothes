@@ -5,7 +5,7 @@ import Venta from "./Venta";
 function Page() {
     return (
         <div className="app-container">
-            <h1 className="titulo">CRM DE ROPA</h1>
+            <h1 className="titulo">URBAN-CLOTHES</h1>
             <div className="grid">
                 <Producto />
                 <Venta />
