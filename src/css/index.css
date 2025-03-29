@@ -16,6 +16,14 @@ body {
     min-height: 100vh;
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;  
+    justify-content: center;
+    padding: 20px;
+}
+
 
 .container {
     max-width: 1200px;
@@ -77,25 +85,40 @@ h1, h2 {
 
 
 .card {
-    background: rgba(15, 14, 14, 0.489);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(241, 240, 240, 0.8);
-    transition: transform 0.3s ease-in-out;
-    color: #f5f0f0;
-    
+    width: 220px;
+    height: 150px;
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 
+                0 0 20px rgba(0, 255, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes sombraColorida {
-  0% { box-shadow: 0 0 15px rgba(255, 77, 0, 0.8); }
-  25% { box-shadow: 0 0 15px rgba(255, 166, 0, 0.8); }
-  50% { box-shadow: 0 0 15px rgba(0, 255, 128, 0.8); }
-  75% { box-shadow: 0 0 15px rgba(0, 140, 255, 0.8); }
-  100% { box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); }
-}
-
+/* Efecto de resplandor al pasar el mouse */
 .card:hover {
-  animation: sombraColorida 1s infinite alternate;
+    transform: scale(1.05) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 
+                0 0 30px rgba(0, 255, 255, 0.6);
+}
+
+/* Efecto de luz de neón en el borde */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #ff9900, #00ffff);
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.7;
 }
 

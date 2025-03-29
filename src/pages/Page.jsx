@@ -1,6 +1,7 @@
-import Producto from "./Producto";
-import Cliente from "./Cliente";
-import Venta from "./Venta";
+import Producto from "../componentes/Producto";
+import Cliente from "../componentes/cliente";
+import Venta from "../componentes/Venta";
+import Estadisticas from "../componentes/Estadisticas";
 
 function Page() {
     return (
@@ -10,6 +11,8 @@ function Page() {
                 <Producto />
                 <Venta />
                 <Cliente />
+                <Estadisticas />
+
             </div>
         </div>
     );
