@@ -88,7 +88,7 @@ h1, h2 {
     width: 220px;
     height: 150px;
     background: rgba(20, 20, 20, 0.9);
-    color: white;
+    color: rgb(187, 177, 177);
     border-radius: 12px;
     padding: 15px;
     text-align: center;
@@ -101,14 +101,14 @@ h1, h2 {
     overflow: hidden;
 }
 
-/* Efecto de resplandor al pasar el mouse */
+
 .card:hover {
     transform: scale(1.05) rotateX(10deg) rotateY(10deg);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 
                 0 0 30px rgba(0, 255, 255, 0.6);
 }
 
-/* Efecto de luz de neón en el borde */
+
 .card::before {
     content: "";
     position: absolute;
@@ -116,9 +116,48 @@ h1, h2 {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #00ffff, #ff00ff, #ff9900, #00ffff);
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #0df743, #00ffff);
     z-index: -1;
     filter: blur(10px);
     opacity: 0.7;
 }
+.menu {
+    position: fixed;
+    left: -250px; /* Se esconde fuera de la pantalla */
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    backdrop-filter: blur(10px);
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    border: red solid;
+}
 
+.menu.open {
+    left: 0; /* Hace que el menú aparezca */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

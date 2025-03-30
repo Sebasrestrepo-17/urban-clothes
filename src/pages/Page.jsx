@@ -2,6 +2,8 @@ import Producto from "../componentes/Producto";
 import Cliente from "../componentes/cliente";
 import Venta from "../componentes/Venta";
 import Estadisticas from "../componentes/Estadisticas";
+import Usuario from "../componentes/Usuario";
+import Menu from "../componentes/Menu";
 
 function Page() {
     return (
@@ -12,7 +14,8 @@ function Page() {
                 <Venta />
                 <Cliente />
                 <Estadisticas />
-
+                <Usuario />
+                <Menu />
             </div>
         </div>
     );
