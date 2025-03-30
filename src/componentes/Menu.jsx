@@ -1,24 +1,33 @@
-import { useState } from "react";
+import { ChevronRight, Home, HelpCircle, Settings, LogOut } from "lucide-react";
+import "../css/index.css";
 
-function Menu() {
-    const [isOpen, setIsOpen] = useState(false);
+const Sidebar = () => {
+  return (
+    <div className="sidebar">
+      <div className="toggle-button">
+        <ChevronRight className="arrow" />
+      </div>
+      
+      <ul className="menu-list">
+        <li className="menu-item">
+          <Home />
+          <span>Inicio</span>
+        </li>
+        <li className="menu-item">
+          <HelpCircle />
+          <span>Soporte</span>
+        </li>
+        <li className="menu-item">
+          <Settings />
+          <span>Configuración</span>
+        </li>
+        <li className="menu-item logout">
+          <LogOut />
+          <span>Cerrar sesión</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
-    console.log("El componente Menu se ha renderizado");
-
-    return (
-        <div 
-            className={`menu ${isOpen ? "open" : ""}`} 
-            onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)}
-        >
-            <ul>
-                <li>🏠 Inicio</li>
-                <li>⚙️ Configuración</li>
-                <li>🛠️ Soporte</li>
-                <li>🚪 Cerrar sesión</li>
-            </ul>
-        </div>
-    );
-}
-
-export default Menu;
+export default Sidebar;

@@ -121,43 +121,80 @@ h1, h2 {
     filter: blur(10px);
     opacity: 0.7;
 }
-.menu {
+
+
+.sidebar {
     position: fixed;
-    left: -250px; /* Se esconde fuera de la pantalla */
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
-    backdrop-filter: blur(10px);
-    transition: left 0.3s ease-in-out;
-    padding: 20px;
+    top: 20px; /* Ajusta la posición */
+    left: 0;
+    height: 60px; /* Solo el tamaño de la flecha cuando está cerrado */
+    width: 40px; /* Menú cerrado más pequeño */
+    background-color: #1e1d1d52;
     color: white;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
     justify-content: center;
-    font-size: 18px;
-    border: red solid;
-}
-
-.menu.open {
-    left: 0; /* Hace que el menú aparezca */
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu ul li {
-    padding: 15px;
+    
+  }
+  
+  .sidebar:hover {
+    width: 200px;
+    height: 250px;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    background-color: #333333;
+    padding: 5px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s;
+    animation: colorChange 3s infinite alternate;
+    width: 20px;
+    height: 30px;
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.menu ul li:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
+    justify-content: center;
+    z-index: 10; /* Asegura que esté por encima */
+    border: 2px solid red;
+    
+      
+  }
+  
+  @keyframes colorChange {
+    0% { background-color: #2ad74d; }
+    50% { background-color: #3d18e0; }
+    100% { background-color: #ef23ae; }
+  }
+  
+  .arrow {
+    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar:hover .arrow {
+    transform: rotate(180deg);
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .sidebar:hover .menu-list {
+    opacity: 1;
+  }
+  
