@@ -8,7 +8,7 @@ import Menu from "../componentes/Menu";
 function Page() {
     return (
         <div className="app-container">
-            <h1 className="titulo">URBAN-CLOTHES</h1>
+            <h1 className="urban-title">URBAN-CLOTHES</h1>
             <div className="grid">
                 <Producto />
                 <Venta />
