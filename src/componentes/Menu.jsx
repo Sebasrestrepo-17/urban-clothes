@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { ChevronRight, Home, HelpCircle, Settings, LogOut } from "lucide-react";
 import "../css/index.css";
 
@@ -9,9 +11,11 @@ const Sidebar = () => {
       </div>
       
       <ul className="menu-list">
-        <li className="menu-item">
-          <Home />
-          <span>Inicio</span>
+      <li className="menu-item">
+          <Link to="/">
+            <Home />
+            <span>Inicio</span>
+          </Link>
         </li>
         <li className="menu-item">
           <HelpCircle />

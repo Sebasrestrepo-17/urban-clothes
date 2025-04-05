@@ -95,8 +95,8 @@ h1, h2 {
     display: inline-block;
     color: white;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), 
-                 -4px -4px 8px rgba(255, 255, 255, 0.9); /* Más contraste blanco alrededor de la letra */
-    background: linear-gradient(45deg, #ff0000, #ff7300, #ffff00, #00ff00, #00ffff, #0000ff, #8000ff);
+                 ; /* Más contraste blanco alrededor de la letra */
+    background: linear-gradient(45deg, #ff0000, #ff7300, #585850, #0d190d, #00ffff, #0000ff, #8000ff);
     background-clip: text;
     -webkit-background-clip: text; /* Específico para WebKit */
     -webkit-text-fill-color: transparent; /* Asegura que el color del texto sea transparente */
@@ -210,7 +210,7 @@ h1, h2 {
   @keyframes colorChange {
     0% { background-color: #2ad74d; }
     50% { background-color: #3d18e0; }
-    100% { background-color: #ef23ae; }
+    100% { background-color: #7c777a; }
   }
   
   .arrow {
