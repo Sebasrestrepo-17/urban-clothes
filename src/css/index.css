@@ -94,9 +94,8 @@ h1, h2 {
     position: relative;
     display: inline-block;
     color: white;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), 
-                 ; /* Más contraste blanco alrededor de la letra */
-    background: linear-gradient(45deg, #ff0000, #ff7300, #585850, #0d190d, #00ffff, #0000ff, #8000ff);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, #0000ff, #00ffff, #8000ff, #0000ff, #00ffff, #0000ff, #8000ff);
     background-clip: text;
     -webkit-background-clip: text; /* Específico para WebKit */
     -webkit-text-fill-color: transparent; /* Asegura que el color del texto sea transparente */
@@ -107,7 +106,7 @@ h1, h2 {
     position: absolute;
     top: 3px;
     left: 3px;
-    color: rgba(255, 255, 255, 0.3); /* Ajusté la transparencia del borde */
+    color: rgb(247, 241, 241); /* Ajusté la transparencia del borde */
     z-index: -1;
     filter: blur(4px); /* Más desenfoque para el borde */
 }
@@ -155,7 +154,7 @@ h1, h2 {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #00ffff, #ff00ff, #0df743, #00ffff);
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #0000ff, #00ffff);
     z-index: -1;
     filter: blur(10px);
     opacity: 0.7;
@@ -202,15 +201,15 @@ h1, h2 {
     align-items: center;
     justify-content: center;
     z-index: 10; /* Asegura que esté por encima */
-    border: 2px solid red;
+    border: 2px solid rgb(251, 251, 251);
     
       
   }
   
   @keyframes colorChange {
-    0% { background-color: #2ad74d; }
+    0% { background-color: #e809f0; }
     50% { background-color: #3d18e0; }
-    100% { background-color: #7c777a; }
+    100% { background-color: #0fe7ef; }
   }
   
   .arrow {
